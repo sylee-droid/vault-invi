@@ -214,31 +214,20 @@ body::after {
   min-height:85vh;
   display:flex;
   align-items:center;
-  padding:120px 10% 120px 8%;
+  justify-content:center;
+  padding:120px 8%;
   overflow:hidden;
   background:linear-gradient(170deg,#04060f 0%,#070a1c 55%,#04060f 100%);
+  text-align:center;
 }
-
-.about .a1 {
-  width:580px; height:500px;
-  background:radial-gradient(ellipse, rgba(12,50,180,0.42) 0%, rgba(8,30,120,0.18) 50%, transparent 70%);
-  right:-8%; top:-12%;
-  animation:af1 15s ease-in-out infinite;
-}
-.about .a2 {
-  width:360px; height:300px;
-  background:radial-gradient(ellipse, rgba(18,195,210,0.22) 0%, transparent 65%);
-  right:10%; bottom:8%;
-  animation:af3 17s ease-in-out infinite;
-}
-
-/* spike bg */
-.about .spike-bg { height:100%; opacity:0.35; }
 
 .about-inner {
   position:relative;
   z-index:2;
-  max-width:520px;
+  max-width:680px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
 .label-bars { display:flex; gap:4px; margin-bottom:40px; }
@@ -261,8 +250,24 @@ body::after {
   line-height:1.95;
   color:var(--white2);
   font-weight:300;
+  text-align:center;
 }
 .about-body strong { color:var(--white); font-weight:600; }
+
+/* about aurora */
+.about .a1 {
+  width:580px; height:500px;
+  background:radial-gradient(ellipse, rgba(12,50,180,0.42) 0%, rgba(8,30,120,0.18) 50%, transparent 70%);
+  right:-8%; top:-12%;
+  animation:af1 15s ease-in-out infinite;
+}
+.about .a2 {
+  width:360px; height:300px;
+  background:radial-gradient(ellipse, rgba(18,195,210,0.22) 0%, transparent 65%);
+  left:5%; bottom:8%;
+  animation:af3 17s ease-in-out infinite;
+}
+.about .spike-bg { height:100%; opacity:0.35; }
 
 /* ══════════════════════════════════
    SESSIONS
@@ -294,7 +299,7 @@ body::after {
   max-width:1080px; margin:0 auto;
 }
 
-.sessions-header { margin-bottom:44px; }
+.sessions-header { margin-bottom:44px; text-align:center; display:flex; flex-direction:column; align-items:center; }
 
 .sessions-title {
   font-size:clamp(28px,3.8vw,48px);
@@ -351,11 +356,11 @@ body::after {
   width:100%;
   background:rgba(255,255,255,0.04);
   border:1px solid rgba(255,255,255,0.11);
-  padding:20px 20px 22px;
+  padding:22px 20px 24px;
   position:relative; overflow:hidden;
   backdrop-filter:blur(4px);
   transition:background 0.3s;
-  display:flex; flex-direction:column; gap:10px;
+  display:flex; flex-direction:column; gap:8px;
 }
 .session-card-box:hover { background:rgba(255,255,255,0.08); }
 .session-card-box::before {
@@ -364,15 +369,19 @@ body::after {
   height:1px;
   background:linear-gradient(to right, var(--cyan), #08c4f0, transparent);
 }
+/* 파트너명 — 크고 굵게, 메인 */
 .partner-name {
-  font-size:10px; font-weight:600;
-  letter-spacing:0.18em;
-  color:var(--cyan);
-  text-transform:uppercase;
+  font-size:20px; font-weight:700;
+  letter-spacing:0.02em;
+  color:var(--white);
+  line-height:1.2;
 }
+/* 세션 제목 — 작고 흐리게, 서브 */
 .session-title-text {
-  font-size:15px; font-weight:600;
-  color:var(--white); line-height:1.55;
+  font-size:12px; font-weight:400;
+  color:var(--white3);
+  line-height:1.6;
+  letter-spacing:0.01em;
 }
 
 /* Q&A */
