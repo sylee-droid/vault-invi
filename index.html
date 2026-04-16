@@ -172,10 +172,20 @@ body::after {
   letter-spacing:-0.03em;
   line-height:1;
   color:var(--white);
-  margin-bottom:28px;
+  margin-bottom:16px;
   opacity:0;
   animation:fadeUp 0.85s ease forwards 0.85s;
   text-shadow:0 0 100px rgba(40,140,255,0.22), 0 0 200px rgba(15,80,200,0.14);
+}
+
+.hero-subtitle {
+  font-size:clamp(20px, 3vw, 38px);
+  font-weight:500;
+  letter-spacing:-0.01em;
+  color:var(--white2);
+  margin-bottom:28px;
+  opacity:0;
+  animation:fadeUp 0.8s ease forwards 1.0s;
 }
 
 .hero-meta {
@@ -590,6 +600,7 @@ body::after {
     </div>
 
     <h1 class="hero-title">vaultcon 2026</h1>
+    <p class="hero-subtitle">기준을 바꾸는 사람들</p>
     <p class="hero-meta">2026.07 Seoul, Korea &nbsp;|&nbsp; 150 Leaders Network</p>
     <div class="hero-line"></div>
     <p class="hero-slogan">The New Standard of Logistics Automation</p>
